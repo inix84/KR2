@@ -48,7 +48,7 @@ public class Main {
         System.out.print("Введите дату задачи: День.Месяц.Год: ");
         String date = scanner.nextLine();
         DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        LocalDate taskDate = LocalDate.parse(date,formatterDate);
+        LocalDate taskDate;// = LocalDate.parse(date,formatterDate);
         try {
             taskDate = LocalDate.parse(date, formatterDate);
             System.out.println(taskDate.format(formatterDate));
@@ -58,7 +58,7 @@ public class Main {
         System.out.print("Введите время задачи: Часы:Минуты ");
         String time = scanner.nextLine();
         DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm");
-        LocalTime taskTime = LocalTime.parse(time,formatterTime);
+        LocalTime taskTime;// = LocalTime.parse(time,formatterTime);
         try {
             taskTime = LocalTime.parse(time, formatterTime);
             System.out.println(taskTime.format(formatterTime));
